@@ -1,7 +1,7 @@
 @import 'utility';
 
 $base-text-size: 16px;
-$base-font-family: sans-serif;
+$base-font-family: Avenir;
 
 html {
   @include full-height;
@@ -14,7 +14,16 @@ body {
 }
 
 h1 {
+  text-align: center;
+  font-weight: normal;
   color: white;
+  background-color: steelblue;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+#colorDisplay {
+  font-size: 200%;
 }
 
 .square {
@@ -23,13 +32,45 @@ h1 {
   padding-bottom: 30%;
   float: left;
   margin: 1.66%;
+  border-radius: 15%;
+  transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  -moz-transitoion: background 0.5s;
 }
 
 #container {
-  margin: 0 auto;
+  margin: 20px auto;
   max-width: 600px;
 }
 
-span {
+#stripe {
+  background-color: white;
+  height: 30px;
+  text-align: center;
+  color: black;
+}
+
+.selected {
+  background-color: steelblue;
   color: white;
+}
+
+button {
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  height: 100%;
+  letter-spacing: 1px;
+  transition: all 2;
+  outline: none;
+}
+
+button:hover {
+  color: white;
+  background-color: steelblue;
+}
+
+#message {
+  display: inline-block;
+  width: 20%;
 }
